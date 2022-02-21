@@ -65,3 +65,26 @@ new Typewriter('#typewriter', {
   cursor: "|"
 });
 console.log("TypeWriter")
+
+
+//=====================Portfolio Swiper ===============
+
+var swiper = new Swiper(".blog-slider", {
+    spaceBetween: 30,
+    effect: 'fade',
+    loop: true,
+    mousewheel:{
+        invert: false
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+      el: ".blog-slider__pagination",
+      clickable:true,
+    },
+    keyboard: true,
+  });
+
+console.log("Swipper")
