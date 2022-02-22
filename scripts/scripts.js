@@ -88,3 +88,35 @@ var swiper = new Swiper(".blog-slider", {
   });
 
 console.log("Swipper")
+
+//=====================Scroll up ===============
+
+function scrollup(){
+    const scrollup = document.getElementById("scroll-up");
+    if(this.scrollY >= 560){
+        scrollup.classList.add('show-scroll');
+    } else {
+        scrollup.classList.remove('show-scroll');
+    }
+}
+
+window.addEventListener('scroll', scrollup);
+
+const sections= document.querySelectorAll('section[id]')
+
+function scrollActive() {
+    const scrollY = window.pageYOffset;
+    sections.forEach(current => {
+        const sectionHeight = current.offsetHeight;
+        const sectionTop = current.offsetTop - 50;
+        sectionId = current.getAttribute('id');
+
+        if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active-link');
+        } else {
+            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active-link')
+        }
+    })
+}
+
+window.addEventListener('scroll', scrollActive);
