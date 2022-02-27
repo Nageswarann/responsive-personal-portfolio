@@ -394,7 +394,7 @@ img {
     width: 600px;
     align-content: center;
     text-align: center;
-    transform: translateX(-4rem);
+    transform: translateX(-1rem);
 }
 
 .home__welcome{
@@ -1476,7 +1476,7 @@ img {
     }
 
     .home__scroll-button{
-        margin-left: 3rem;
+        margin-left: 12rem;
     }
 
     .about{
