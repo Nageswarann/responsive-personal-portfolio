@@ -50,7 +50,6 @@ function linkAction() {
 }
 
 navlink.forEach(n => n.addEventListener('click', linkAction))
-console.log("remove")
 
 
 
@@ -59,12 +58,14 @@ console.log("remove")
 
 
 new Typewriter('#typewriter', {
-  strings: ['Nageswaran', 'Web-developer', 'Software Engineer'],
+  strings: ['Software Engineer <span>&#128187;</span>', "JS Developer <span>&#128526;</span>", "Book enthusiast <span>&#128218;</span>"],
   autoStart: true,
   loop: true,
-  cursor: "|"
+  cursor: "|",
+  delay: 30,
+  deleteSpeed: 20,
+  pauseFor: 2000
 });
-console.log("TypeWriter")
 
 
 //=====================Portfolio Swiper ===============
@@ -87,7 +88,6 @@ var swiper = new Swiper(".blog-slider", {
     keyboard: true,
   });
 
-console.log("Swipper")
 
 //=====================Scroll up ===============
 

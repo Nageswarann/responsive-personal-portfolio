@@ -104,7 +104,7 @@ body.dark-theme {
     align-items: center;
     padding-left: var(--mb-0-5);
     margin: 0;
-    margin-top: -5px;
+    margin-top: -20px;
     gap: var(--mb-0-75);
 }
 
@@ -269,6 +269,11 @@ img {
     font-family: var(--robotomono-font);
 }
 
+.slash{
+    display: contents;
+    font-size: 12px;
+}
+
 @media screen and (max-width: 768px) {
     .nav__menu{
         position: fixed;
@@ -407,6 +412,39 @@ img {
     padding-bottom: 1rem;
 }
 
+.emoji{
+    animation: waving-hand 2.5s infinite;
+    transform-origin: 70% 70%;
+    display: inline-block;
+}
+
+@keyframes waving-hand {
+    0% {
+        transform: rotate(0deg);
+    }
+    10% {
+        transform: rotate(14deg);
+    }
+    20% {
+        transform: rotate(-8deg);
+    }
+    30% {
+        transform: rotate(14deg);
+    }
+    40% {
+        transform: rotate(-4deg);
+    }
+    50% {
+        transform: rotate(10deg);
+    }
+    60% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
 #typewriter{
     margin-top: var(--mb-1);
     margin-bottom: var(--mb-2);
@@ -417,7 +455,7 @@ img {
     font-family: var(--robotomono-font);
     font-size: var(--h2-font-size);
     font-weight: var(--font-medium);
-    color: var(--mainText);
+    color: var(--text-color);
 }
 
 .Typewriter__cursor{
@@ -510,6 +548,10 @@ img {
     text-align: center;
     margin-bottom: var(--mb-2-5);
     color: var(--text-color);
+}
+
+.cat-gif{
+    height: 20px;       
 }
 
 .about__info{
