@@ -120,3 +120,22 @@ function scrollActive() {
 }
 
 window.addEventListener('scroll', scrollActive);
+
+
+
+//=====================EmailJS ========================
+
+function sendMail(){
+    var mailParams = {
+        from_name: document.getElementById("fromName").value,
+        mail: document.getElementById("mail").value,
+        subject: document.getElementById("subject").value,
+        message: document.getElementById("message").value
+    };
+    console.log(mailParams);
+    emailjs.send("service_cxj90cf", "template_3xzk3te", mailParams)
+    .then((res)=>{
+        alert("success", res.status);
+    })
+    .catch(err=>{console.log("Error")})
+}

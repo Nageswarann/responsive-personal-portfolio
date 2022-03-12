@@ -926,22 +926,22 @@
             <!--FORM-->
             <div class="col-lg-6 pl-lg-4 mt-lg-0 mt-6 contact-form" id="message-me">
                 <h2 class="contact__title">Intrested to work together? - <span>Let's talk</span></h2>
-                <form action="#" method="POST" class="cf">
+                <form action="#" class="cf">
                     <div class="row">
                         <div class="col-lg-6">
-                            <input type="text" name="message-name" class="form-control form__color mb-30 cf" placeholder="Your Name">
+                            <input type="text" name="message-name" id="fromName" class="form-control form__color mb-30 cf" placeholder="Your Name">
                         </div>
                         <div class="col-lg-6">
-                            <input type="email" name="message-email" class="form-control form__color mb-30 cf" placeholder="Your Email">
+                            <input type="email" name="message-email" id="mail" class="form-control form__color mb-30 cf" placeholder="Your Email">
                         </div>
                         <div class="col-lg-12">
-                            <input type="text" name="message-subject" class="form-control form__color mb-30 cf" placeholder="Subject">
+                            <input type="text" name="message-subject" id="subject" class="form-control form__color mb-30 cf" placeholder="Subject">
                         </div>
                         <div class="col-lg-12">
-                            <textarea name="message" class="form-control form__color mb-30 cf" cols="30" rows="5" placeholder="Your Message"></textarea>
+                            <textarea name="message" id="message" class="form-control form__color mb-30 cf" cols="30" rows="5" placeholder="Your Message"></textarea>
                         </div>
                         <div class="col-lg-12">
-                            <button type="submit" class="button button--flex send-message form_button" placeholder="Your Name">
+                            <button type="submit" onclick="sendMail()" class="button button--flex send-message form_button" placeholder="Your Name">
                                 Send Message
                                 <i class="uil uil-message button__icon"></i>
                                 </button>
@@ -1008,6 +1008,13 @@
     <!--Swipper JS-->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
+    <!--emailjs-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+    (function() {
+    emailjs.init("Ed2T9WV7PgTq4q5_n");
+    })();
+    </script>
 
     <!--- Self Scripts -->
     <script src="scripts/scripts.js"></script>
